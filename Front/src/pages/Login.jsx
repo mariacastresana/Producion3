@@ -20,7 +20,7 @@ const Login = () => {
 
   const tryLogin = async (user) => {
     try {
-      const result = await fetch(`${BACKEND_URL}/login`, {
+      const result = await fetch(`${BACKEND_URL}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(user),
@@ -42,6 +42,11 @@ const Login = () => {
       }
     } catch (error) {
       console.error("Login error:", error);
+      console.error("Error details:", {
+        message: error.message,
+        status: error.status,
+        response: error.response
+      });
       setError(
         "Error al intentar iniciar sesión. Por favor, verifica tu conexión o intenta más tarde."
       ); // Establece el mensaje de error
