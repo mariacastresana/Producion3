@@ -16,6 +16,8 @@ const allowedOrigins = [
   "https://soft-edge-two.vercel.app",
   "https://dialogflow.cloud.google.com",
   "https://extensions.aitopia.ai",
+  "https://producion3.vercel.app/",
+  "https://producion3-2oxt-3e7hrxgnb-marias-projects-4ec161ac.vercel.app/",
 ];
 
 // Middleware para eliminar barras diagonales dobles en la URL
